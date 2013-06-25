@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+
+% math typesetting
+\usepackage{array, amsmath, amssymb, amsfonts}
+
+% layout control
+\usepackage[paper=a4paper,left=25mm,right=25mm,top=20mm,bottom=25mm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\setlength{\parskip}{.5em}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{parallel}
+\usepackage{parcolumns}
+
+% tables, list
+\usepackage{tabularx, booktabs, multicol, multirow, longtable}
+\usepackage{enumitem} %no space bewteen item \begin{itemize}[noitemsep]
+
+% graphics stuff
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{subfig, graphicx, tikz}
+\usepackage[space]{grffile} % allows us to specify directories that have spaces
+\usepackage[section]{placeins} % prevents floats from moving past a \FloatBarrier or section
+% \usepackage{pgfplots}
+\graphicspath{ {../graph/} }
+
+% Game theory graphics
+\usepackage{epsfig, subfigure, subfloat, graphicx}
+\usepackage{anysize, indentfirst, setspace}
+\usepackage{verbatim, rotating, paralisthan}
+\usepackage{caption, hanging}
+\usepackage{pstricks, sgamevar, egameps}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,backgrounds,decorations.pathmorphing,decorations.pathreplacing}
+% These are the key packages.  There is also sgame instead of sgamevar, but it doesn't work with beamer or other macros.
+% The dcolumn package interferes with these, so you need to remove it from your preamble.
+\newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+% I believe this is a command that the package wants to use, though not sure what it's doing and this document seems to compile ok without it, so who knows.
+% Note: If you include any extensive form games, you need to compile it in the special 3-step way (in WinEDT): LaTeX, dvi->ps, ps->pdf.
+
+% bibliography
+\usepackage{natbib}
+\bibpunct{(}{)}{;}{a}{}{,}
+\usepackage{setspace}
+
+% misc
+\usepackage{boxedminipage}
+\usepackage{times} % Use Times font
+\usepackage{animate}
+\usepackage[colorlinks=true, allcolors=MidnightBlue]{hyperref}
+
+% Including External Code
+\usepackage{verbatim, listings}
+\lstset{
+  language=R,
+	basicstyle=\scriptsize\ttfamily,
+	commentstyle=\ttfamily\color{gray},
+	numbers=left,
+	numberstyle=\ttfamily\color{gray}\footnotesize,
+	stepnumber=1,
+	numbersep=5pt,
+	backgroundcolor=\color{white},
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	frame=single,
+	tabsize=2,
+	captionpos=b,
+	breaklines=true,
+	breakatwhitespace=false,
+	title=\lstname,
+	escapeinside={},
+	keywordstyle={},
+	morekeywords={}
+	}
+
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+% -------------------- title -------------------- %
+
+\title{Title 1\\
+        Title 2}
+\author{Anh Le - Duke University}
+\date{}
+
+\setlength{\headheight}{15pt}
+\setlength{\headsep}{20pt}
+\pagestyle{fancyplain}
+
+\fancyhf{}
+
+\lhead{\fancyplain{}{Anh Le}}
+\chead{\fancyplain{}{Center header title}}
+\rhead{\fancyplain{}{\today}}
+\rfoot{\fancyplain{}{\thepage}}
+
+%%%%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%
+
+% \doublespacing
+
+\begin{document}
+\maketitle
+
+\newpage
+\thispagestyle{plain}
+
+\begin{spacing}{0.1}
+\tableofcontents
+\end{spacing}
+
+\begin{spacing}{0.1}
+\listoffigures
+\end{spacing}
+
+\end{document}
