@@ -44,11 +44,13 @@
 \bibpunct{(}{)}{;}{a}{}{,}
 \usepackage{setspace}
 
-% misc
-\usepackage{boxedminipage}
+% misc (used often)
 \usepackage{times} % Use Times font
-\usepackage{animate}
 \usepackage[colorlinks=true, allcolors=MidnightBlue]{hyperref}
+
+% misc (used rarely)
+\usepackage{animate}
+\usepackage{boxedminipage}
 
 % Including External Code
 \usepackage{verbatim, listings}
