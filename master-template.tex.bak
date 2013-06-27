@@ -118,12 +118,4 @@
 \listoffigures
 \end{spacing}
 
-\begin{tabular}{ll}
-\centering
-\toprule
-blah & blah \\
-\bottomrule
-\end{tabular}
-\captionof{table}{Posterior mean and 95\% CI}
-
-\end{document} 
+\end{document}
